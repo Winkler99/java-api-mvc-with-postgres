@@ -89,7 +89,7 @@ public class EmployeeRepository {
         PreparedStatement statement = this.connection.prepareStatement(SQL);
         statement.setString(1, employee.getName());
         statement.setString(2, employee.getJobName());
-        statement.setInt(3, employee.getSalaryGrade_id());
+        statement.setInt(3, employee.getSalary_id());
         statement.setInt(4, employee.getDepartment_id());
         statement.setInt(5, id);
         int rowsAffected = statement.executeUpdate();
@@ -121,7 +121,7 @@ public class EmployeeRepository {
         PreparedStatement statement = this.connection.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
         statement.setString(1, employee.getName());
         statement.setString(2, employee.getJobName());
-        statement.setInt(3, employee.getSalaryGrade_id());
+        statement.setInt(3, employee.getSalary_id());
         statement.setInt(4, employee.getDepartment_id());
         int rowsAffected = statement.executeUpdate();
         int newId = 0;

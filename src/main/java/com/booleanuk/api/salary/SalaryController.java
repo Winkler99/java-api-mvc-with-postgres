@@ -37,7 +37,7 @@ public class SalaryController {
     public Salary create(@RequestBody Salary salary) throws SQLException {
         Salary theEmployee = this.salaries.add(salary);
         if (theEmployee == null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unable to create the specified Employee");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Unable to create the specified salary");
         }
         return theEmployee;
     }
