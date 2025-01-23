@@ -4,22 +4,22 @@ public class Employee {
     private int id;
     private String name;
     private String jobName;
-    private String salaryGrade;
-    private String department;
+    private int salaryGrade_id;
+    private int department_id;
 
-    public Employee(int id, String name, String jobName, String salaryGrade, String department){
+    public Employee(int id, String name, String jobName, int salaryGrade_id, int department_id){
         this.id = id;
         this.name = name;
         this.jobName = jobName;
-        this.salaryGrade = salaryGrade;
-        this.department = department;
+        this.salaryGrade_id = salaryGrade_id;
+        this.department_id = department_id;
     }
 
-    public Employee(String name, String jobName, String salaryGrade, String department){
+    public Employee(String name, String jobName, int salaryGrade_id, int department_id){
         this.name = name;
         this.jobName = jobName;
-        this.salaryGrade = salaryGrade;
-        this.department = department;
+        this.salaryGrade_id = salaryGrade_id;
+        this.department_id = department_id;
     }
 
     public Employee(int id){
@@ -46,12 +46,12 @@ public class Employee {
         return jobName;
     }
 
-    public String getSalaryGrade() {
-        return salaryGrade;
+    public int getSalaryGrade_id() {
+        return salaryGrade_id;
     }
 
-    public String getDepartment() {
-        return department;
+    public int getDepartment_id() {
+        return department_id;
     }
 
     public String toString() {
@@ -59,8 +59,8 @@ public class Employee {
         result += this.id + " - ";
         result += this.name + " - ";
         result += this.jobName + " - ";
-        result += this.salaryGrade + " - ";
-        result += this.department;
+        result += this.salaryGrade_id + " - ";
+        result += this.department_id;
         return result;
     }
 }
